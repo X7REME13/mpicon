@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matías Gabriel Picón | Lic. en Tecnología de la Información & Full Stack Developer</title>
+  <meta name="description" content="Portfolio y Curriculum Vitae de Matías Gabriel Picón — Licenciado en Tecnología de la Información (IA), Desarrollador Full Stack SSR (.NET, React, Vue.js, Python) y entusiasta de sistemas embebidos y aeroespaciales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <span class="brand-dot"></span>
+        <span>Matías Picón</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#experience" data-i18n="nav_experience">Experiencia</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Stack</a></li>
+        <li><a href="#highlights" data-i18n="nav_highlights">Participaciones</a></li>
+        <li><a href="#cv-download" data-i18n="nav_cv">Descargar CV</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="lang-toggle" class="btn-toggle" title="Switch Language / Cambiar Idioma" aria-label="Switch Language">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-label">EN</span>
+        </button>
+        <button id="theme-toggle" class="btn-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i id="theme-icon" class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div>
+        <div class="hero-badge">
+          <i class="fa-solid fa-terminal"></i>
+          <span data-i18n="hero_badge">Disponible para desafíos de Ingeniería de Software & Arquitectura</span>
+        </div>
+        <h1 data-i18n="hero_title">Matías Gabriel Picón</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Licenciado en Tecnología de la Información | Desarrollador Full Stack SSR
+        </p>
+        <p class="hero-bio" data-i18n="hero_bio">
+          Ingeniero de software Full Stack especializado en el ecosistema .NET, React/Vue.js y Python. Apasionado por la arquitectura de sistemas, ciberseguridad IoT, telemetría aeroespacial y automatización sobre Linux/ARM64.
+        </p>
+
+        <div class="hero-actions">
+          <a href="cv/Matias_Picon_CV_ES.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span data-i18n="btn_cv_es">CV en Español (PDF)</span>
+          </a>
+          <a href="cv/Matias_Picon_CV_EN.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span data-i18n="btn_cv_en">Resume in English (PDF)</span>
+          </a>
+          <a href="https://github.com/x7reme13" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i>
+            <span data-i18n="btn_github">Ver GitHub</span>
+          </a>
+        </div>
+
+        <div class="social-strip">
+          <a href="mailto:matiasgpicon@gmail.com" class="social-link">
+            <i class="fa-solid fa-envelope"></i> matiasgpicon@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/matias-picon" target="_blank" rel="noopener" class="social-link">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/matias-picon
+          </a>
+          <a href="https://www.codingame.com/profile/x7reme13" target="_blank" rel="noopener" class="social-link">
+            <i class="fa-solid fa-code"></i> codingame.com/x7reme13
+          </a>
+          <span class="social-link">
+            <i class="fa-solid fa-location-dot"></i> Buenos Aires, Argentina
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Highlights Card -->
+      <aside class="hero-card">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="stat-info">
+            <h3 data-i18n="stat1_title">+5 años de experiencia</h3>
+            <p data-i18n="stat1_desc">Desarrollo Full Stack (.NET, React, Vue.js, Python, SQL Server, OpenShift)</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="stat-info">
+            <h3 data-i18n="stat2_title">1er Puesto Premio Santander</h3>
+            <p data-i18n="stat2_desc">Ganador Trabajo Final de Grado 2023 con el sistema IPS IoT 'Espresso'</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="stat-info">
+            <h3 data-i18n="stat3_title">Formación Continua</h3>
+            <p data-i18n="stat3_desc">Lic. en TI (Orientación IA - UP) + Ciencias de la Computación (UBA)</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Experience & Education Section -->
+    <section id="experience">
+      <div class="two-col-grid">
+        <!-- Left: Experience -->
+        <div>
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fa-solid fa-briefcase"></i>
+              <span data-i18n="sec_exp_title">Experiencia Profesional</span>
+            </h2>
+          </div>
+
+          <div class="timeline">
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title" data-i18n="job1_role">Desarrollador SSR Full Stack</h3>
+                <span class="card-date" data-i18n="job1_date">Ago 2024 – Actualidad</span>
+              </div>
+              <div class="card-org" data-i18n="job1_company">Bitwise — Grupo Sancor Seguros</div>
+              <ul class="card-list">
+                <li data-i18n="job1_b1">Desarrollo y evolución de aplicaciones críticas utilizando .NET en backend y React / Vue.js en frontend bajo metodologías ágiles (Jira).</li>
+                <li data-i18n="job1_b2">Gestión de control de versiones e integración continua en GitLab, asegurando estándares de calidad con SonarQube.</li>
+                <li data-i18n="job1_b3">Participación activa en despliegues sobre IIS y OpenShift (Kubernetes), junto con monitoreo de performance y observabilidad en Dynatrace.</li>
+                <li data-i18n="job1_b4">Proactivo en la investigación e impulso de iniciativas técnicas y mejoras arquitectónicas más allá de las responsabilidades del rol.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title" data-i18n="job2_role">Desarrollador Full Stack</h3>
+                <span class="card-date" data-i18n="job2_date">Ago 2021 – Ago 2024</span>
+              </div>
+              <div class="card-org" data-i18n="job2_company">Superintendencia de Seguros de la Nación (SSN)</div>
+              <ul class="card-list">
+                <li data-i18n="job2_b1">Desarrollo de aplicaciones web en .NET (Framework y Core) con SQL Server y Entity Framework Core.</li>
+                <li data-i18n="job2_b2">Creación de plataformas con Razor y APIs REST, además de desarrollo móvil en Kotlin y procesos ETL en Python.</li>
+                <li data-i18n="job2_b3">Desde 2022, responsabilidades de coordinación técnica, arquitectura, relevamiento con usuarios, CI/CD en GitLab y modernización de sistemas legacy.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <!-- Right: Education & Languages -->
+        <div>
+          <div class="section-header">
+            <h2 class="section-title">
+              <i class="fa-solid fa-user-graduate"></i>
+              <span data-i18n="sec_edu_title">Educación</span>
+            </h2>
+          </div>
+
+          <div class="timeline">
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title" data-i18n="edu1_degree">Licenciatura en Ciencias de la Computación</h3>
+                <span class="card-date" data-i18n="edu1_date">2025 – En curso</span>
+              </div>
+              <div class="card-org" data-i18n="edu1_school">Universidad de Buenos Aires (UBA)</div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title" data-i18n="edu2_degree">Licenciado en Tecnología de la Información (Orientación en IA)</h3>
+                <span class="card-date" data-i18n="edu2_date">2022 – 2023</span>
+              </div>
+              <div class="card-org" data-i18n="edu2_school">Universidad de Palermo (UP)</div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title" data-i18n="edu3_degree">Técnico Superior en Análisis de Sistemas</h3>
+                <span class="card-date" data-i18n="edu3_date">2020 – 2021</span>
+              </div>
+              <div class="card-org" data-i18n="edu3_school">Instituto Tecnológico ORT</div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fa-solid fa-language" style="color: var(--accent-primary); margin-right: 6px;"></i>
+                  <span data-i18n="edu_lang_title">Idiomas</span>
+                </h3>
+              </div>
+              <ul class="card-list">
+                <li data-i18n="edu_lang_es">Español: Nativo</li>
+                <li data-i18n="edu_lang_en">Inglés: Reading, Writing & Listening Avanzado | Speaking Conversacional</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <i class="fa-solid fa-code-branch"></i>
+            <span data-i18n="sec_proj_title">Proyectos & Ingeniería Aplicada</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="sec_proj_sub">
+            Desde sistemas embebidos de ciberseguridad y telemetría de cohetería hasta aplicaciones Full Stack.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+        <button class="filter-btn" data-filter="iot" data-i18n="filter_iot">IoT / Aeroespacial / Linux</button>
+        <button class="filter-btn" data-filter="web" data-i18n="filter_web">Full Stack & APIs</button>
+        <button class="filter-btn" data-filter="algo" data-i18n="filter_algo">Algoritmos & Data</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Espresso -->
+        <article class="card project-card" data-category="iot web">
+          <div>
+            <div class="award-pill" data-i18n="proj1_award">🏆 1er Puesto Concurso Banco Santander 2023</div>
+            <h3 class="card-title" data-i18n="proj1_title">Espresso — Dispositivo IoT IPS</h3>
+            <p class="project-desc" data-i18n="proj1_desc">
+              Dispositivo IoT con capacidades de Sistema de Prevención de Intrusiones (IPS) a un precio asequible y plug-and-play para usuarios no técnicos. Permite proteger redes Wi-Fi de comercios y hogares sin requerir infraestructura compleja ni personal especializado.
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">.NET</span>
+              <span class="tag">Python</span>
+              <span class="tag">Scapy</span>
+              <span class="tag">Bash</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Raspberry Pi</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/x7reme13/espresso" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub Repo
+              </a>
+              <a href="https://www.palermo.edu/ingenieria/alumnos-protagonistas/matias-picon.html" target="_blank" rel="noopener">
+                <i class="fa-solid fa-newspaper"></i> <span data-i18n="proj1_interview">Entrevista UP</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Estación Terrena -->
+        <article class="card project-card" data-category="iot web">
+          <div>
+            <div class="award-pill" data-i18n="proj2_badge">🚀 Cohetería Experimental & LoRa RF</div>
+            <h3 class="card-title" data-i18n="proj2_title">Estación Terrena de Telemetría</h3>
+            <p class="project-desc" data-i18n="proj2_desc">
+              Plataforma asíncrona para recepción de tramas binarias LoRa de alta frecuencia por enlace serie, validación CRC-16/CCITT-FALSE, decodificación dinámica YAML, persistencia dual SQLite/CSV y dashboard de misión en tiempo real vía WebSockets.
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">Python (asyncio)</span>
+              <span class="tag">LoRa RF</span>
+              <span class="tag">CRC-16</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Canvas JS</span>
+              <span class="tag">Arduino</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Invenciones-Espaciales/estacion-terrena-pc" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> Invenciones-Espaciales
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Homelab & Telegram Bot -->
+        <article class="card project-card" data-category="iot">
+          <div>
+            <div class="award-pill" data-i18n="proj3_badge">🐧 Infraestructura ARM64 & SDR</div>
+            <h3 class="card-title" data-i18n="proj3_title">Raspberry Pi Edge Server & Telegram Bot</h3>
+            <p class="project-desc" data-i18n="proj3_desc">
+              Homelab autoalojado en Linux Debian ARM64 con contenedores Docker, recepción de radiosondas meteorológicas por SDR (radiosonde_auto_rx), automatización con n8n, inferencia LLM local (llama.cpp) y bot de monitoreo con Scapy en Python y C++.
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">Debian ARM64</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">SDR / RF</span>
+              <span class="tag">n8n</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/x7reme13/telegram-bot" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> telegram-bot
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: MozoDigital -->
+        <article class="card project-card" data-category="web">
+          <div>
+            <h3 class="card-title" data-i18n="proj4_title">MozoDigital (API REST + App Móvil)</h3>
+            <p class="project-desc" data-i18n="proj4_desc">
+              Plataforma integral para pedidos gastronómicos sin contacto dentro de restaurantes. Incluye administración CRUD de sucursales, menús dinámicos, gestión de comandas en tiempo real y cliente móvil.
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js / REST API</span>
+              <span class="tag">Mobile Client</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/x7reme13/api-MozoDigital" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> API Repo
+              </a>
+              <a href="https://github.com/x7reme13/mobile-MozoDigital" target="_blank" rel="noopener">
+                <i class="fa-solid fa-mobile-screen"></i> Mobile Repo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Python REST APIs -->
+        <article class="card project-card" data-category="web">
+          <div>
+            <h3 class="card-title" data-i18n="proj5_title">ZoteTheMighty API & Mozambique API</h3>
+            <p class="project-desc" data-i18n="proj5_desc">
+              Servicios web RESTful desarrollados en Python con persistencia en bases de datos ligeras (SQLite), estructurados para consulta rápida y despliegue ligero.
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">REST API</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/x7reme13/ZoteTheMighty-API" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> ZoteTheMighty-API
+              </a>
+              <a href="https://github.com/x7reme13/mozambique-api" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> mozambique-api
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Algorithms & Automation -->
+        <article class="card project-card" data-category="algo">
+          <div>
+            <h3 class="card-title" data-i18n="proj6_title">Calendar Checker & Advent of Code</h3>
+            <p class="project-desc" data-i18n="proj6_desc">
+              Herramienta de sincronización automatizada de planillas con Google Sheets API / archivos Excel (.xlsx) y colección de resoluciones algorítmicas en Python y Jupyter Notebooks (AoC 2021 / 2024 & CodinGame).
+            </p>
+          </div>
+          <div>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Jupyter Notebook</span>
+              <span class="tag">Google Sheets API</span>
+              <span class="tag">Algorithms</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/x7reme13/calendar-checker" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> calendar-checker
+              </a>
+              <a href="https://github.com/x7reme13/AOC2024" target="_blank" rel="noopener">
+                <i class="fa-solid fa-puzzle-piece"></i> AOC 2024
+              </a>
+              <a href="https://www.codingame.com/profile/x7reme13" target="_blank" rel="noopener">
+                <i class="fa-solid fa-code"></i> CodinGame
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fa-solid fa-microchip"></i>
+          <span data-i18n="sec_skills_title">Stack Tecnológico</span>
+        </h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="card skill-group">
+          <h3><i class="fa-solid fa-server"></i> <span data-i18n="skill_cat1">Backend & Lenguajes</span></h3>
+          <div class="tag-list">
+            <span class="tag">C# / .NET Core & Framework</span>
+            <span class="tag">ASP.NET / REST APIs</span>
+            <span class="tag">Entity Framework Core</span>
+            <span class="tag">Python (asyncio, ETL, Scapy)</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">C++</span>
+            <span class="tag">Bash</span>
+          </div>
+        </div>
+
+        <div class="card skill-group">
+          <h3><i class="fa-solid fa-window-maximize"></i> <span data-i18n="skill_cat2">Frontend & Web</span></h3>
+          <div class="tag-list">
+            <span class="tag">React</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">Razor Pages</span>
+            <span class="tag">HTML5 & CSS3</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">HTML5 Canvas</span>
+          </div>
+        </div>
+
+        <div class="card skill-group">
+          <h3><i class="fa-solid fa-cloud"></i> <span data-i18n="skill_cat3">Cloud, DevOps & Calidad</span></h3>
+          <div class="tag-list">
+            <span class="tag">OpenShift (Kubernetes)</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitLab CI/CD</span>
+            <span class="tag">SonarQube</span>
+            <span class="tag">Dynatrace</span>
+            <span class="tag">IIS</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Jira / Agile</span>
+          </div>
+        </div>
+
+        <div class="card skill-group">
+          <h3><i class="fa-solid fa-database"></i> <span data-i18n="skill_cat4">IoT, Datos & Linux</span></h3>
+          <div class="tag-list">
+            <span class="tag">SQL Server</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Linux (Debian / ARM64)</span>
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Arduino / LoRa RF</span>
+            <span class="tag">Network Security (IPS)</span>
+            <span class="tag">SDR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights / Participations Section -->
+    <section id="highlights">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fa-solid fa-star"></i>
+          <span data-i18n="sec_high_title">Participaciones Destacadas</span>
+        </h2>
+      </div>
+
+      <div class="highlights-grid">
+        <article class="card">
+          <h3 class="card-title" data-i18n="high1_title">IA en E-commerce (Hackathon)</h3>
+          <div class="card-org" data-i18n="high1_org">AWS, Mutt Data & Trafilea · 2024, Argentina</div>
+          <p class="project-desc" data-i18n="high1_desc">
+            Participé en una hackathon desarrollando soluciones cloud con AWS y fortaleciendo habilidades en inteligencia artificial y análisis de datos aplicados a e-commerce.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title" data-i18n="high2_title">Competencia Espacial OpenSpace</h3>
+          <div class="card-org" data-i18n="high2_org">Academia Exponencial & Satellogic · 2020, Argentina</div>
+          <p class="project-desc" data-i18n="high2_desc">
+            Participé en la competencia de ingeniería espacial para diseñar un CubeSat de 1U proyectado para acoplarse y lanzarse junto a un satélite comercial de Satellogic.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title" data-i18n="high3_title">Taller de Charlas TED</h3>
+          <div class="card-org" data-i18n="high3_org">TED-Ed · 2018, Argentina</div>
+          <p class="project-desc" data-i18n="high3_desc">
+            Preparé y brindé la charla titulada «Exploración Espacial: la última Frontera», explorando la historia espacial y la importancia de impulsar la curiosidad, la innovación y el desarrollo científico.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CV Download Banner -->
+    <section id="cv-download">
+      <div class="cv-banner">
+        <div style="max-width: 620px;">
+          <h2 style="font-size: 1.4rem; margin-bottom: 0.45rem;" data-i18n="cv_banner_title">
+            ¿Buscás la versión imprimible en PDF (LaTeX 2 columnas)?
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;" data-i18n="cv_banner_desc">
+            Podés descargar el CV compilado en LaTeX tanto en Español como en Inglés, o inspeccionar el código fuente .tex directamente en el repositorio.
+          </p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+          <a href="cv/Matias_Picon_CV_ES.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-download"></i>
+            <span data-i18n="btn_cv_es">CV en Español (PDF)</span>
+          </a>
+          <a href="cv/Matias_Picon_CV_EN.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-solid fa-download"></i>
+            <span data-i18n="btn_cv_en">Resume in English (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span data-i18n="footer_text">Diseñado y desarrollado por Matías Gabriel Picón · Alojado en GitHub Pages</span>
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://github.com/x7reme13" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/matias-picon" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:matiasgpicon@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

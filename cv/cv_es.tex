@@ -1,0 +1,188 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\usepackage[margin=0pt]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Color Palette (Refined Modern Blue & Slate)
+\definecolor{headerbg}{HTML}{1E6B9B}
+\definecolor{sidebarbg}{HTML}{F1F5F9}
+\definecolor{primary}{HTML}{1E6B9B}
+\definecolor{accent}{HTML}{B91C1C}
+\definecolor{darktext}{HTML}{0F172A}
+\definecolor{mutedtext}{HTML}{475569}
+\definecolor{rulecolor}{HTML}{CBD5E1}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary,
+    linkcolor=primary,
+    pdfauthor={Matías Gabriel Picón},
+    pdftitle={Matías Gabriel Picón - Curriculum Vitae (ES)}
+}
+
+% Section formatting
+\titleformat{\section}
+  {\normalsize\bfseries\color{primary}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{-4pt}\textcolor{rulecolor}{\rule{\linewidth}{0.7pt}}\vspace{1pt}]
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+
+% Custom helper commands
+\newcommand{\cvjob}[4]{
+  {\normalsize\bfseries\color{darktext}#1} \hfill {\footnotesize\color{mutedtext}#3}\\[1pt]
+  {\small\bfseries\color{primary}#2}\\[2pt]
+  {\footnotesize\color{darktext}#4}\vspace{5pt}
+}
+
+\newcommand{\cvedu}[3]{
+  {\small\bfseries\color{darktext}#1}\\[1pt]
+  {\footnotesize\color{primary}#2} \hfill {\footnotesize\color{mutedtext}#3}\vspace{4pt}
+}
+
+\newcommand{\cvproject}[4]{
+  {\small\bfseries\color{darktext}#1} {\footnotesize #2}\\[1.5pt]
+  {\footnotesize\color{darktext}#3}\\[1.5pt]
+  {\footnotesize\textbf{\color{primary}Stack:} \color{mutedtext}#4}\vspace{5pt}
+}
+
+\newcommand{\sideitem}[3]{
+  {\small\bfseries\color{darktext}#1}\\[1pt]
+  {\footnotesize\color{primary}#2} {\footnotesize\color{mutedtext}(#3)}\\[1.5pt]
+}
+
+\begin{document}
+
+% Background Canvas (Header + Right Sidebar)
+\begin{tikzpicture}[remember picture, overlay]
+  % Right Sidebar Background
+  \fill[sidebarbg] ([xshift=13.5cm]current page.north west) rectangle (current page.south east);
+  % Top Header Banner
+  \fill[headerbg] (current page.north west) rectangle ([yshift=-2.85cm]current page.north east);
+\end{tikzpicture}
+
+% Header Content
+\vspace*{0.48cm}
+\hspace*{0.9cm}
+\begin{minipage}{19.0cm}
+  {\fontsize{23}{27}\selectfont\bfseries\color{white} Matías Gabriel Picón}\\[3pt]
+  {\large\color{white!92} Licenciado en Tecnología de la Información \,|\, Desarrollador Full Stack SSR}
+\end{minipage}
+
+\vspace{0.6cm}
+
+% Two-Column Side-by-Side Container
+\noindent\hspace*{0.9cm}%
+\begin{minipage}[t]{11.9cm}
+
+\section{Experiencia Profesional}
+
+\cvjob{Desarrollador SSR Full Stack}{Bitwise -- Grupo Sancor Seguros}{Ago 2024 -- Actualidad}{
+  \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt, topsep=1pt, parsep=0pt]
+    \item Desarrollo y evolución de aplicaciones críticas utilizando \textbf{.NET} en backend y \textbf{React / Vue.js} en frontend dentro de equipos ágiles (\textbf{Jira}).
+    \item Gestión de repositorios e integración continua en \textbf{GitLab}, aplicando estándares de calidad de código y análisis estático con \textbf{SonarQube}.
+    \item Participación activa en despliegues sobre \textbf{IIS} y \textbf{OpenShift (Kubernetes)}, junto con observabilidad y monitoreo de performance en \textbf{Dynatrace}.
+    \item Impulso proactivo de investigaciones técnicas, mejoras de arquitectura y automatización más allá de las responsabilidades base del rol.
+  \end{itemize}
+}
+
+\cvjob{Desarrollador Full Stack}{Superintendencia de Seguros de la Nación (SSN)}{Ago 2021 -- Ago 2024}{
+  \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt, topsep=1pt, parsep=0pt]
+    \item Desarrollo de sistemas web institucionales en \textbf{.NET (Framework y Core)} con \textbf{SQL Server} y \textbf{Entity Framework Core}.
+    \item Construcción de aplicaciones web con \textbf{Razor}, diseño de \textbf{APIs REST}, desarrollo móvil en \textbf{Kotlin} y pipelines \textbf{ETL en Python}.
+    \item Desde 2022, liderazgo técnico en coordinación de equipo, decisiones de arquitectura, relevamiento directo con usuarios, pipelines \textbf{CI/CD en GitLab} y modernización de sistemas legacy.
+  \end{itemize}
+}
+
+\section{Educación}
+
+\cvedu{Licenciatura en Ciencias de la Computación}{Universidad de Buenos Aires (UBA)}{2025 -- En curso}
+
+\cvedu{Licenciado en Tecnología de la Información (Orientación en IA)}{Universidad de Palermo (UP)}{2022 -- 2023}
+
+\cvedu{Técnico Superior en Análisis de Sistemas}{Instituto Tecnológico ORT}{2020 -- 2021}
+
+\section{Proyectos e Ingeniería Aplicada}
+
+\cvproject{Espresso}{\textcolor{accent}{\textbf{-- 1er Puesto Concurso Banco Santander}}}{
+  Dispositivo IoT con capacidades de Prevención de Intrusiones (\textbf{IPS}) a precio asequible y fácil de utilizar por usuarios no técnicos. Permite proteger redes Wi-Fi de comercios y hogares sin requerir gran inversión en infraestructura ni personal especializado.\\
+  \textbf{Mención destacada:} 1er Puesto concurso ``Trabajo Final de Grado 2023'' de Banco Santander -- \href{https://www.palermo.edu/ingenieria/alumnos-protagonistas/matias-picon.html}{Link a entrevista}.
+}{.NET, Python, Scapy, Bash, Linux, Raspberry Pi}
+
+\cvproject{Estación Terrena de Telemetría Aeroespacial}{-- \href{https://github.com/Invenciones-Espaciales/estacion-terrena-pc}{GitHub}}{
+  Plataforma asíncrona de estación terrena para cohetería experimental. Adquiere tramas binarias LoRa de alta frecuencia por enlace serie, valida integridad mediante \textbf{CRC-16/CCITT-FALSE}, decodifica esquemas dinámicos YAML, persiste en \textbf{SQLite/CSV} y transmite telemetría en tiempo real vía \textbf{WebSockets} a un panel de misión de alto contraste.
+}{Python (asyncio), LoRa RF, CRC-16, SQLite, WebSockets, Canvas JS, Arduino}
+
+\cvproject{Homelab Edge Server, SDR \& Automatización}{-- \href{https://github.com/x7reme13}{GitHub}}{
+  Infraestructura autoalojada sobre \textbf{Raspberry Pi (ARM64)} con contenedores \textbf{Docker}, recepción de telemetría de radiosondas por radio definida por software (\textbf{SDR / auto\_rx}), flujos de automatización en \textbf{n8n}, inferencia local con \textbf{llama.cpp} y bot de monitoreo de red/sistema en \textbf{Telegram} con Python y C++.
+}{Linux (Debian ARM64), Docker, Python, C++, SDR, n8n, Systemd}
+
+\cvproject{APIs \& Proyectos Open Source}{-- \href{https://github.com/x7reme13?tab=repositories}{Repositorios}}{
+  Desarrollo de \textbf{MozoDigital} (plataforma full stack de pedidos gastronómicos sin contacto con API REST + app móvil), \textbf{ZoteTheMighty-API} \& \textbf{Mozambique-API} (servicios REST en Python), \textbf{Calendar Checker} (automatización con Google Sheets) y resoluciones algorítmicas en \textbf{Advent of Code} (Python / Jupyter).
+}{Python, JavaScript, REST APIs, SQLite, Git}
+
+\end{minipage}%
+\hspace*{1.2cm}%
+\begin{minipage}[t]{6.3cm}
+\raggedright
+
+\section{Contacto}
+{\footnotesize\color{darktext}
+\begin{itemize}[leftmargin=1.5em, itemsep=3.5pt, topsep=2pt]
+  \item[\faEnvelope] \href{mailto:matiasgpicon@gmail.com}{matiasgpicon@gmail.com}
+  \item[\faPhone] +54 9 11 3106-2435
+  \item[\faMapMarker*] Buenos Aires, Argentina
+  \item[\faLinkedin] \href{https://www.linkedin.com/in/matias-picon}{linkedin.com/in/matias-picon}
+  \item[\faGithub] \href{https://github.com/x7reme13}{github.com/x7reme13}
+  \item[\faCode] \href{https://www.codingame.com/profile/x7reme13}{codingame.com/x7reme13}
+  \item[\faGlobe] \href{https://x7reme13.github.io}{x7reme13.github.io}
+\end{itemize}
+}
+
+\section{Stack Técnico}
+{\footnotesize\color{darktext}
+\textbf{\color{primary}Backend \& Lenguajes}\\
+C\#, .NET Core / Framework, ASP.NET, Entity Framework Core, Python (asyncio, ETL, Scapy), C++, Bash, Kotlin.\\[4pt]
+\textbf{\color{primary}Frontend \& Web}\\
+React, Vue.js, JavaScript (ES6+), Razor, HTML5, CSS3, WebSockets, Canvas API.\\[4pt]
+\textbf{\color{primary}Datos \& Almacenamiento}\\
+SQL Server, SQLite, Diseño Relacional, Optimización de Consultas.\\[4pt]
+\textbf{\color{primary}DevOps, Cloud \& Observabilidad}\\
+OpenShift (Kubernetes), Docker, GitLab CI/CD, IIS, AWS, SonarQube, Dynatrace, Linux (Debian/ARM64), Jira.\\[4pt]
+\textbf{\color{primary}IoT, Hardware \& Embebidos}\\
+Raspberry Pi, Arduino, Telemetría LoRa RF, Ciberseguridad de Red (IPS), SDR.
+}
+
+\section{Idiomas}
+{\footnotesize\color{darktext}
+\textbf{Español:} Nativo\\[2.5pt]
+\textbf{Inglés:}\\
+\hspace*{0.3em}• Reading \& Writing: \textbf{Avanzado}\\
+\hspace*{0.3em}• Listening: \textbf{Avanzado}\\
+\hspace*{0.3em}• Speaking: \textbf{Conversacional}
+}
+
+\section{Participaciones Destacadas}
+
+\sideitem{IA en E-commerce}{AWS, Mutt Data \& Trafilea}{2024}
+{\footnotesize\color{mutedtext}Participé en una hackathon desarrollando soluciones con AWS y fortaleciendo habilidades en inteligencia artificial y análisis de datos.}\vspace{5pt}
+
+\sideitem{OpenSpace}{Academia Exponencial \& Satellogic}{2020}
+{\footnotesize\color{mutedtext}Participé en una competencia para desarrollar un \textbf{CubeSat de 1U} que sería acoplado y lanzado junto a un satélite de Satellogic.}\vspace{5pt}
+
+\sideitem{Taller de Charlas TED}{TED-Ed}{2018}
+{\footnotesize\color{mutedtext}Charla titulada \textit{``Exploración Espacial: la última Frontera''}, explorando la historia espacial y la importancia de impulsar la curiosidad, la innovación y el desarrollo científico.}
+
+\end{minipage}
+
+\end{document}
